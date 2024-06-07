@@ -13,7 +13,7 @@ public class Contador {
             contar(parametroUm, parametroDois);
 
         } catch (ParametrosInvalidosException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
 
     }
@@ -31,5 +31,7 @@ public class Contador {
 }
 
 class ParametrosInvalidosException extends Exception {
-    public ParametrosInvalidosException(String message){}
+    public ParametrosInvalidosException(String message){
+        super(message);
+    }
 }
